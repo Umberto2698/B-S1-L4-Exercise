@@ -16,8 +16,7 @@ public class Dipendente {
         this.dipartimento = dipartimento;
     }
 
-    public Dipendente(double stipendioBase, int matricola, double stipendio, double importoOrarioStraordinario, Livello livello, Dipartimento dipartimento) {
-        this.stipendioBase = stipendioBase;
+    public Dipendente(int matricola, double stipendio, double importoOrarioStraordinario, Livello livello, Dipartimento dipartimento) {
         this.matricola = matricola;
         this.stipendio = stipendio;
         this.importoOrarioStraordinario = importoOrarioStraordinario;
@@ -47,13 +46,13 @@ public class Dipendente {
     public Livello promuovi() {
         if (this.livello == Livello.OPERAIO) {
             this.livello = Livello.IMPIEGATO;
-            this.stipendio = stipendioBase * 1.2;
+            this.stipendio = this.stipendio == stipendioBase ? stipendioBase * 1.2 : this.stipendio * 1.2;
         } else if (this.livello == Livello.IMPIEGATO) {
             this.livello = Livello.QUADRO;
-            this.stipendio = stipendioBase * 1.5;
+            this.stipendio = this.stipendio == stipendioBase ? stipendioBase * 1.5 : this.stipendio * 1.5;
         } else if (this.livello == Livello.QUADRO) {
             this.livello = Livello.DIRIGENTE;
-            this.stipendio = stipendioBase * 2;
+            this.stipendio = this.stipendio == stipendioBase ? stipendioBase * 2 : this.stipendio * 2;
         } else {
             System.out.println("Il dipendente è il ditigente e non può essere promosso.");
         }

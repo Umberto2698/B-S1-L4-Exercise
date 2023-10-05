@@ -6,8 +6,8 @@ class Modificadipartimento extends Dipendente {
         super(matricola, dipartimento);
     }
 
-    public Modificadipartimento(double stipendioBase, int matricola, double stipendio, double importoOrarioStraordinario, Livello livello, Dipartimento dipartimento) {
-        super(stipendioBase, matricola, stipendio, importoOrarioStraordinario, livello, dipartimento);
+    public Modificadipartimento(int matricola, double stipendio, double importoOrarioStraordinario, Livello livello, Dipartimento dipartimento) {
+        super(matricola, stipendio, importoOrarioStraordinario, livello, dipartimento);
     }
 
 
