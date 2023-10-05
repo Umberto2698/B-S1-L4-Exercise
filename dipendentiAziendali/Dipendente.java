@@ -75,11 +75,23 @@ public class Dipendente {
         return importoOrarioStraordinario;
     }
 
+    public void setImportoOrarioStraordinario(double importoOrarioStraordinario) {
+        if (importoOrarioStraordinario > 0) {
+            this.importoOrarioStraordinario = importoOrarioStraordinario;
+        } else {
+            System.out.println("L'importo deve essere maggiore di zero.");
+        }
+    }
+
     public Livello getLivello() {
         return livello;
     }
 
     public Dipartimento getDipartimento() {
         return dipartimento;
+    }
+
+    public void setDipartimento(Dipartimento dipartimento) {
+        this.dipartimento = dipartimento;
     }
 }
