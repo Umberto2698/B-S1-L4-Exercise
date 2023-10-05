@@ -34,11 +34,11 @@ public class Dipendente {
 
     public String stampaDatiDipendente() {
         return "dipendentiAziendali.Dipendente{" +
-                "stipendioBase=" + stipendioBase + ",\n" +
-                "matricola=" + matricola + ",\n" +
-                "stipendio=" + stipendio + ",\n" +
-                "importoOrarioStraordinario=" + importoOrarioStraordinario + ",\n" +
-                "livello=" + livello + ",\n" +
+                "stipendioBase=" + stipendioBase + ", " +
+                "matricola=" + matricola + ", " +
+                "stipendio=" + stipendio + ", " +
+                "importoOrarioStraordinario=" + importoOrarioStraordinario + ", " +
+                "livello=" + livello + ", " +
                 "dipartimento=" + dipartimento +
                 '}';
     }
